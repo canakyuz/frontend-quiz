@@ -1,0 +1,48 @@
+.foreground {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  overflow: hidden;
+}
+
+.torii-gate {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 375px;
+  max-height: 330px;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.torii-gate__top {
+  width: 100%;
+  height: 60px;
+  background-color: var(--color-blue);
+  position: relative;
+  overflow: hidden;
+}
+.torii-gate__top-cols {
+  height: 45px;
+  width: 32%;
+  margin: auto;
+  border-left: 30px solid var(--color-blue-background);
+  border-right: 30px solid var(--color-blue-background);
+}
+
+.torii-gate__bottom {
+  height: 60px;
+  width: 80%;
+  margin: auto;
+  background-color: var(--color-blue-foreground);
+}
+
+.torii-gate__bottom-cols {
+  height: 165px;
+  width: 32%;
+  margin: auto;
+  border-left: 30px solid var(--color-blue-background);
+  border-right: 30px solid var(--color-blue-background);
+}
