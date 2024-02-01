@@ -23,7 +23,20 @@ const cases = [
     "41/18 12 34 7 3 15 32 39 10 38 27 5 6 26 25 29 4 37 13 23 20 11 8 0 14 33 24/1",
 ];
 
-function getInaccessibleFactory(n, c) {}
+function getInaccessibleFactory(n, c) {
+    // Fabrika indexlerini küçükten büyüğe sırala
+    c.sort((a, b) => a - b);
+
+    let maxDistance = 0;
+
+    // İlk fabrikadan başlayarak diğer fabrikalara olan mesafeyi hesapla
+    for (let i = 0; i < c.length - 1; i++) {
+        const distance = c[i + 1] - c[i];
+        maxDistance = Math.max(maxDistance, distance);
+    }
+
+    return maxDistance;
+}
 
 function main() {
     for (let i = 0; i < cases.length; i++) {
@@ -35,4 +48,5 @@ function main() {
         console.log(`Case ${i + 1} [${inaccessible || "0"} == ${a}]: ${inaccessible == a ? "OK" : "FAIL"}`);
     }
 }
+
 main();
